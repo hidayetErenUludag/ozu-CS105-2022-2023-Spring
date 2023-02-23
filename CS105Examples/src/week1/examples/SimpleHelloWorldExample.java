@@ -1,6 +1,6 @@
-package demo;
+package week1.examples;
 
-public class Hello {
+public class SimpleHelloWorldExample {
 
 	public static void main(String[] args) {
 		System.out.println("Hello World");
@@ -10,7 +10,6 @@ public class Hello {
 		int sum=firstValue+secondValue;
 		System.out.println(sum);
 
-		
 	}
 
 }
