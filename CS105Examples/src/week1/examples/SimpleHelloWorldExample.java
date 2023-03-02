@@ -9,6 +9,15 @@ public class SimpleHelloWorldExample {
 		
 		int sum=firstValue+secondValue;
 		System.out.println(sum);
+		
+		
+		for (int i = 0; i < 6; i++) {
+			  if (i == 4) {
+			     continue;
+			  }
+			  System.out.println(i);
+			}
+
 
 	}
 
