@@ -19,8 +19,6 @@ public class NumberGuess {
 	public static void main(String[] args) {
 		int random = 39;
 		
-		
-
 		Scanner input = new Scanner(System.in);
 		while (true) {
 			System.out.println("Enter your guess:");
