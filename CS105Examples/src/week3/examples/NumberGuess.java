@@ -17,18 +17,22 @@ import java.util.Scanner;
 public class NumberGuess {
 
 	public static void main(String[] args) {
-		int random = 39;
+	
+
+		int random = (int)(Math.random()*90)+10;
 		
 		Scanner input = new Scanner(System.in);
+		int i=0;
 		while (true) {
 			System.out.println("Enter your guess:");
 			int userValue = input.nextInt();
+			i++;
 			if (userValue > random) 
 				System.out.println("Your guess is too high");
 			 else if (userValue < random) 
 				System.out.println("Your guess is too low");
 			 else {
-				System.out.println("Congratulations");
+				System.out.println("Congratulations "+i);
 				break;
 			}
 
