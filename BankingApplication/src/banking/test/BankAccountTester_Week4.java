@@ -1,12 +1,19 @@
 package banking.test;
 
 import banking.model.BankAccount;
-
-public class BankAccountTester {
+/**
+ * Week 4 BankAccount Example: 
+ * Create classes and objects
+ * Add fields
+ * add methods
+ * call methods (send messages to the objects)
+ */
+public class BankAccountTester_Week4 {
 
 	public static void main(String[] args) {
 		BankAccount accountAyse=new BankAccount();
 		accountAyse.deposit(1000);
+		
 		BankAccount accountEda=new BankAccount();
 		accountEda.deposit(9000);
 		
