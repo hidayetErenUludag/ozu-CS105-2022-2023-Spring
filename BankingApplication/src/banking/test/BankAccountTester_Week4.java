@@ -21,8 +21,8 @@ public class BankAccountTester_Week4 {
 		accountAyse.withdraw(3000);
 		accountEda.withdraw(500);
 		
-		System.out.println(accountEda.checkBalance());
-		System.out.println(accountAyse.checkBalance());
+		System.out.println(accountEda.getBalance());
+		System.out.println(accountAyse.getBalance());
 	
 	}
 

@@ -3,13 +3,17 @@ package banking.model;
 import java.util.Date;
 
 public class BankAccount {
+	private static double FEE;
+	private static double INTEREST_RATE=0.11;
 	private double balance=0;
 	private long accountId=(long)(Math.random()*100000);
 	private Date createDate=new Date();
 	private Customer owner;
 	
 	
+	
 	public double withdraw(double amount) {
+		
 		if(amount+10>balance) {
 			System.out.println("Insufficient Balance. "
 					+ "Your balance is:"+balance);
@@ -21,13 +25,10 @@ public class BankAccount {
 	}
 	
 	public boolean deposit(double amount) {
-		balance=balance+amount+amount*0.11; 
+		balance=balance+amount+amount*INTEREST_RATE; 
 		return true;
 	}
-	public double checkBalance() {
-		return balance;
-	}
-
+	
 	public double getBalance() {
 		return balance;
 	}
@@ -58,6 +59,14 @@ public class BankAccount {
 
 	public void setOwner(Customer owner) {
 		this.owner = owner;
+	}
+
+	public static double getFEE() {
+		return FEE;
+	}
+
+	public static void setFEE(double fEE) {
+		FEE = fEE;
 	}
 	
 	
