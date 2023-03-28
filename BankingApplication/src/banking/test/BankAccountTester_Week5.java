@@ -14,6 +14,7 @@ public class BankAccountTester_Week5 {
 	public static void main(String[] args) {
 		BankAccount.setFEE(10);//All BankAccount instances will share same fee (10 TL)
 		Customer customer1 = new Customer("Ayse");
+		System.out.println(customer1);
 		Customer customer2 = new Customer("Eda");
 		BankAccount account1 = new BankAccount();
 		BankAccount account2 = new BankAccount();
