@@ -20,7 +20,7 @@ public class Customer {
 	}
 
 	public Customer() {
-		// this.customerId=(long)(Math.random()*100000);
+		//this.customerId=(long)(Math.random()*100000);
 		setCustomerId((long) (Math.random() * 100000));
 		this.createDate = new Date();
 
