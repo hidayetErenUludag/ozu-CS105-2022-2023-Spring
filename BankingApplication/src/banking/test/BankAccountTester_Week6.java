@@ -37,7 +37,9 @@ public class BankAccountTester_Week6 {
 		//false - before adding equals method
 		System.out.println(customer3.equals(customer4));
 		System.out.println(customer3.equals("Ali"));//false
-
+		
+	
+		
 		
 	}
 

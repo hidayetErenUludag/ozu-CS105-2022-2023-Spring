@@ -62,6 +62,7 @@ public class BankAccount {
 	}
 
 	public static double getFEE() {
+		
 		return FEE;
 	}
 
