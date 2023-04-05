@@ -3,12 +3,12 @@ package week6.exercise.solutions;
 public class Matrix {
 	private int row;
 	private int col;
-	private double[][] data;
+	private int[][] data;
 
 	public Matrix(int row, int col) {
 		this.row = row;
 		this.col = col;
-		this.data = new double[row][col];
+		this.data = new int[row][col];
 
 	}
 
@@ -20,7 +20,7 @@ public class Matrix {
 		return col;
 	}
 
-	public void updateValue(int i, int j, double value) {
+	public void updateValue(int i, int j, int value) {
 		data[i][j] = value;
 	}
 
@@ -34,9 +34,39 @@ public class Matrix {
 			for (int j = 0; j < col; j++) {
 				matrixSum.data[i][j] = this.data[i][j] + secondMatrix.data[i][j];
 			}
-
+			
 		}
 		return matrixSum;
+		
+	}
+	public Matrix multiply(Matrix secondMatrix) {
+		if (data[0].length!=secondMatrix.col) {
+			System.out.println("Matrices cannot be multiplied");
+			return null;
+		}
+		Matrix matrixMult = new Matrix(row, secondMatrix.col);
+		
+		for (int k = 0; k < data[0].length; k++) {
+	
+			
+			for (int i = 0; i < secondMatrix.row; i++) {
+				System.out.print("t["+k+"]["+i+"]=");
+				int sum=0;
+				for (int j = 0; j < data[0].length; j++) {
+					sum+=data[k][j]*secondMatrix.data[j][i];
+				}
+				matrixMult.data[k][i]=sum;
+				System.out.println();
+				
+			}
+			
+			
+		}
+		
+		
+		
+		
+		return matrixMult;
 
 	}
 
