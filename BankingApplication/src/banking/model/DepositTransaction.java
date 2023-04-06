@@ -6,5 +6,7 @@ public class DepositTransaction extends Transaction {
 		super(amount);
 		
 	}
+	
+	
 
 }

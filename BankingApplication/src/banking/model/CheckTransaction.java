@@ -16,4 +16,10 @@ public class CheckTransaction extends WithdrawalTransaction {
 	private void setChNumber(int chNumber) {
 		this.chNumber = chNumber;
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString()+" #"+chNumber;
+	}
+	
 }

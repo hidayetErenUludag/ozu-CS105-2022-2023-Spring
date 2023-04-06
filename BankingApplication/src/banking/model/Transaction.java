@@ -3,6 +3,7 @@ package banking.model;
 import java.util.Date;
 
 public class Transaction {
+	//private - package (default)-protected-public
 	private Date date;//Encapsulation
 	private double amount;//Encapsulation
 	
@@ -28,8 +29,12 @@ public class Transaction {
 	private void setAmount(double amount) {
 		this.amount = amount;
 	}
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return " A "+getClass().getSimpleName() +"$"+ amount;
+	}
+	//"a $50 DepositTransaction"
+	
 }
+
