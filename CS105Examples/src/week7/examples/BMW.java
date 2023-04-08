@@ -5,24 +5,24 @@ package week7.examples;
 
 public class BMW extends Car {
 	
-//	public String getName() {
-//		return "Adonis";
-//	}
+	public String getName() {
+		return "Adonis";
+	}
 	
 //	public String toString() {
 //		return getColor()+" BMW";
 //	}
+
 	
-	
-	public BMW() {
+	public BMW(int year, int model) {
+		
 		super();
-		System.out.println("C");
 		
 	}
-//
-//	public BMW() {
-//		super();
-//	}
+
+	public BMW() {
+		super();
+	}
 
 	@Override
 	public String getColor() {

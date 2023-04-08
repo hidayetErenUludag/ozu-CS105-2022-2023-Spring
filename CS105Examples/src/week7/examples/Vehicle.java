@@ -3,13 +3,12 @@ package week7.examples;
 
 public class Vehicle  {
 
-//	public Vehicle(int a) {
-//		super();
-//	}
+	public Vehicle(int a) {
+		super();
+	}
 
 	public Vehicle() {
 		super();
-		System.out.println("A");
 		
 	}
 
