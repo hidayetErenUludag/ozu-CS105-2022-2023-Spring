@@ -21,5 +21,13 @@ public class CheckTransaction extends WithdrawalTransaction {
 	public String toString() {
 		return super.toString()+" #"+chNumber;
 	}
+	@Override
+	public void update(BankAccount acc) {
+		super.update(acc);
+		acc.withdraw(20);
+		
+	}
+	
+	
 	
 }

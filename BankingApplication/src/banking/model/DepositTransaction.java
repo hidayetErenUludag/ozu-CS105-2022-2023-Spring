@@ -7,6 +7,11 @@ public class DepositTransaction extends Transaction {
 		
 	}
 	
+	@Override
+	public void update(BankAccount acc) {
+		acc.deposit(getAmount());
+	}
+	
 	
 
 }

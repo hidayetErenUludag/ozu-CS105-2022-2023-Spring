@@ -10,7 +10,9 @@ public class BankAccount {
 	private Date createDate=new Date();
 	private Customer owner;
 	
-	
+	public void post(Transaction transaction) {
+		transaction.update(this);
+	}
 	
 	public double withdraw(double amount) {
 		
@@ -28,6 +30,7 @@ public class BankAccount {
 		balance=balance+amount+amount*INTEREST_RATE; 
 		return true;
 	}
+	
 	
 	public double getBalance() {
 		return balance;

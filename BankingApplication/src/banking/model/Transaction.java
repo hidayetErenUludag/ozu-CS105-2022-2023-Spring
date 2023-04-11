@@ -17,6 +17,10 @@ public class Transaction {
 //		setDate(new Date());
 	}
 	
+	public void update(BankAccount acc) {
+		System.out.println("Transaction update");
+	}
+	
 	public Date getDate() {
 		return date;
 	}
