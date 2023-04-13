@@ -2,7 +2,7 @@ package banking.model;
 
 import java.util.Date;
 
-public class Transaction {
+public abstract class Transaction {
 	//private - package (default)-protected-public
 	private Date date;//Encapsulation
 	private double amount;//Encapsulation
@@ -17,9 +17,7 @@ public class Transaction {
 //		setDate(new Date());
 	}
 	
-	public void update(BankAccount acc) {
-		System.out.println("Transaction update");
-	}
+	public abstract void update(BankAccount acc);
 	
 	public Date getDate() {
 		return date;
