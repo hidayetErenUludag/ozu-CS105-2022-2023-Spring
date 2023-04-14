@@ -1,5 +1,9 @@
 package homework2;
-
+/**
+ * 
+ * @author Esma Meral
+ *
+ */
 public class TemperatureTest {
 
 	public static void main(String[] args) {

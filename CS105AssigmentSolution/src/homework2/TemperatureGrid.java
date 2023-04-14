@@ -1,5 +1,9 @@
 package homework2;
-
+/**
+ * 
+ * @author Esma Meral
+ *
+ */
 public class TemperatureGrid {
 	/**
 	 * A two-dimensional array of temperature values, initialized in the constructor
