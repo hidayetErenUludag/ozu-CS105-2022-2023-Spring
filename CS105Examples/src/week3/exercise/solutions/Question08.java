@@ -9,7 +9,7 @@ Last Array: {6,3,9,2,5,13,1,7}
  * @author Esma Meral
  *
  */
-public class Question8 {
+public class Question08 {
 
 	public static void main(String[] args) {
 		int[] firstArray={6,3,9,2,5};

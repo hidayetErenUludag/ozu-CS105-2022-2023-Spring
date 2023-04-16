@@ -1,9 +1,9 @@
 package week3.exercise.solutions;
 
-public class Question2 {
+public class Question15 {
 
 	public static void main(String[] args) {
-		// look at the week3.examples.FindPrimeNumbers
+		// Look at week3.examples.NumberGuess
 
 	}
 

@@ -6,7 +6,7 @@ package week3.exercise.solutions;
  * array. Find how many of the elements are integer and how many of them are <1.
  *
  */
-public class Question6 {
+public class Question06 {
 
 	public static void main(String[] args) {
 		double[] list = new double[20];

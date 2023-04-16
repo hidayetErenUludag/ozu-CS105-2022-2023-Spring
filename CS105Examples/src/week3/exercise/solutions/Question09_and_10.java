@@ -12,7 +12,7 @@ package week3.exercise.solutions;
  * @author Esma Meral
  *
  */
-public class Question9_and_10 {
+public class Question09_and_10 {
 
 	public static void main(String[] args) {
 		int[] arr1 = { 2, 4, 3, 9, 12, 7 };

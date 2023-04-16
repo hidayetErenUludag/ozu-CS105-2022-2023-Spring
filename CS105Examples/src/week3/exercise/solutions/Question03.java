@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Esma Meral
  *
  */
-public class Question3 {
+public class Question03 {
 
 	public static void main(String[] args) {
 //Look week3.examples.FindPerfectNumbers class

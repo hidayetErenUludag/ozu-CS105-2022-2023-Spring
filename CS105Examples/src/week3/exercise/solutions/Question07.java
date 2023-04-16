@@ -6,7 +6,7 @@ package week3.exercise.solutions;
  * @author Esma Meral
  *
  */
-public class Question7 {
+public class Question07 {
 public static void main(String[] args) {
 	int[] array=new int[15];
 	array[0]=10;
