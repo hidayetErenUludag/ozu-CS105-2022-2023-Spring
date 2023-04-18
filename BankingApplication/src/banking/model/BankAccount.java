@@ -9,10 +9,22 @@ public class BankAccount {
 	private long accountId=(long)(Math.random()*100000);
 	private Date createDate=new Date();
 	private Customer owner;
-	
-	public void post(Transaction transaction) {
-		transaction.update(this);
+	public BankAccount() {
+		super();
+		
 	}
+	
+	public BankAccount(Customer owner ) {
+		super();
+		this.owner = owner;
+	}
+
+	public void post(BankAccountUpdater anUpdater) {
+		anUpdater.update(this);
+	}
+//	public void post(Transaction transaction) {
+//		transaction.update(this);
+//	}
 	
 	public double withdraw(double amount) {
 		

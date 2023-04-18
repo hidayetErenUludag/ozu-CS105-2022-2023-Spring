@@ -2,7 +2,7 @@ package banking.model;
 
 import java.util.Date;
 
-public abstract class Transaction {
+public abstract class Transaction implements BankAccountUpdater{
 	//private - package (default)-protected-public
 	private Date date;//Encapsulation
 	private double amount;//Encapsulation
