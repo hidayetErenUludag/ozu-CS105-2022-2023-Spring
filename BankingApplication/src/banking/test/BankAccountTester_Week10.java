@@ -6,24 +6,26 @@ import banking.model.Customer;
 import banking.model.DepositTransaction;
 import banking.model.OwnerChange;
 import banking.model.Transaction;
+import banking.model.WithdrawalTransaction;
 
 /**
 
  */
-public class BankAccountTester_Week9 {
+public class BankAccountTester_Week10 {
 
 	public static void main(String[] args) throws InsufficientBalanceException {
 		Customer customer=new Customer("Ali");
-		Transaction trx1=new DepositTransaction(1000);
-		
 		BankAccount account=new BankAccount(customer);
+		System.out.println("Balance:"+account.getBalance());
 		
-		Customer newCust=new Customer("Berke");
-		System.out.println("BEFORE:"+account.getOwner().getName()+ " Balance:"+account.getBalance());
-		OwnerChange ownerChange=new OwnerChange(newCust);
-		account.post(ownerChange);
+		Transaction trx1=new DepositTransaction(1000);
 		account.post(trx1);
-		System.out.println("AFTER:"+account.getOwner().getName()+ " Balance:"+account.getBalance());
+		System.out.println("Balance:"+account.getBalance());
+		
+		Transaction trx2=new WithdrawalTransaction(3000);
+		account.post(trx2);
+		
+		System.out.println("Balance:"+account.getBalance());
 
 		
 

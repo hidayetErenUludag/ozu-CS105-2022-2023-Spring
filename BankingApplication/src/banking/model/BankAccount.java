@@ -2,6 +2,8 @@ package banking.model;
 
 import java.util.Date;
 
+import banking.exception.InsufficientBalanceException;
+
 public class BankAccount {
 	private static double FEE;
 	private static double INTEREST_RATE=0.11;
@@ -19,19 +21,18 @@ public class BankAccount {
 		this.owner = owner;
 	}
 
-	public void post(BankAccountUpdater anUpdater) {
+	public void post(BankAccountUpdater anUpdater) throws InsufficientBalanceException {
 		anUpdater.update(this);
 	}
 //	public void post(Transaction transaction) {
 //		transaction.update(this);
 //	}
 	
-	public double withdraw(double amount) {
+	public double withdraw(double amount) throws InsufficientBalanceException {
 		
 		if(amount+10>balance) {
-			System.out.println("Insufficient Balance. "
+			throw new InsufficientBalanceException("Insufficient Balance. "
 					+ "Your balance is:"+balance);
-			return 0;
 		}else {
 			balance=balance-amount-10;
 			return amount;

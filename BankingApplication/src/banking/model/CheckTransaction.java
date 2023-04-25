@@ -1,5 +1,7 @@
 package banking.model;
 
+import banking.exception.InsufficientBalanceException;
+
 public class CheckTransaction extends WithdrawalTransaction {
 	
 
@@ -22,7 +24,7 @@ public class CheckTransaction extends WithdrawalTransaction {
 		return super.toString()+" #"+chNumber;
 	}
 	@Override
-	public void update(BankAccount acc) {
+	public void update(BankAccount acc) throws InsufficientBalanceException {
 		super.update(acc);
 		acc.withdraw(20);
 		

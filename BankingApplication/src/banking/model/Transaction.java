@@ -2,6 +2,8 @@ package banking.model;
 
 import java.util.Date;
 
+import banking.exception.InsufficientBalanceException;
+
 public abstract class Transaction implements BankAccountUpdater{
 	//private - package (default)-protected-public
 	private Date date;//Encapsulation
@@ -17,7 +19,8 @@ public abstract class Transaction implements BankAccountUpdater{
 //		setDate(new Date());
 	}
 	
-	public abstract void update(BankAccount acc);
+	public abstract void update(BankAccount acc) throws InsufficientBalanceException;
+
 	
 	public Date getDate() {
 		return date;

@@ -1,5 +1,6 @@
 package banking.test;
 
+import banking.exception.InsufficientBalanceException;
 import banking.model.BankAccount;
 /**
  * Week 4 BankAccount Example: 
@@ -17,9 +18,14 @@ public class BankAccountTester_Week4 {
 		BankAccount accountEda=new BankAccount();
 		accountEda.deposit(9000);
 		
-		accountEda.withdraw(200);
-		accountAyse.withdraw(3000);
-		accountEda.withdraw(500);
+		try {
+			accountEda.withdraw(200);
+			accountAyse.withdraw(3000);
+			accountEda.withdraw(500);
+		} catch (InsufficientBalanceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println(accountEda.getBalance());
 		System.out.println(accountAyse.getBalance());

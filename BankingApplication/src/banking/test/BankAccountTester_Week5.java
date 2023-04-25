@@ -1,5 +1,6 @@
 package banking.test;
 
+import banking.exception.InsufficientBalanceException;
 import banking.model.BankAccount;
 import banking.model.Customer;
 
@@ -34,7 +35,12 @@ public class BankAccountTester_Week5 {
 
 		System.out.println(customer1.getName() + " Balance:" + customer1.getBankAccount().getBalance());
 		account1.deposit(1000);
-		account1.withdraw(400);
+		try {
+			account1.withdraw(400);
+		} catch (InsufficientBalanceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		account1.deposit(100);
 		System.out.println(customer1.getName() + " Balance:" + customer1.getBankAccount().getBalance());
 		//BankAccount.setFEE(15.6);//Correct way

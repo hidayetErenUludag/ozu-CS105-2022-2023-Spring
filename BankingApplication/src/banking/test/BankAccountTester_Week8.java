@@ -1,5 +1,6 @@
 package banking.test;
 
+import banking.exception.InsufficientBalanceException;
 import banking.model.BankAccount;
 import banking.model.CheckTransaction;
 import banking.model.Customer;
@@ -12,7 +13,7 @@ import banking.model.WithdrawalTransaction;
  */
 public class BankAccountTester_Week8 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InsufficientBalanceException {
 		Transaction trx = new CheckTransaction(200, 230);
 		CheckTransaction checkTrx=new CheckTransaction(100, 123);
 		Transaction depositTrx=new DepositTransaction(1000);
